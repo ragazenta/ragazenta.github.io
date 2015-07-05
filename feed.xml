@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Renjaya Raga Zenta</title>
+    <description>211-115</description>
+    <link>http://ragazenta.github.io</link>
+    <atom:link href="http://ragazenta.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        
+        
+          <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 05 Jul 2015 19:52:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/welcome-to-jekyll/</guid>
+      </item>
+    
+      <item>
+        <title>Renjaya Posting #3</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 04 Apr 2013 14:35:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/renjaya_posting-%233/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/renjaya_posting-%233/</guid>
+      </item>
+    
+      <item>
+        <title>Renjaya Posting #2</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 20 Mar 2013 13:04:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/renjaya_posting-%232/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/renjaya_posting-%232/</guid>
+      </item>
+    
+      <item>
+        <title>Renjaya Posting #1</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 11 Feb 2013 08:59:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/renjaya_posting-%231/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/renjaya_posting-%231/</guid>
+      </item>
+    
+  </channel>
+</rss>
