@@ -7,6 +7,18 @@
     <atom:link href="http://ragazenta.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Linux Desktop Modding #2</title>
+        
+        
+          <description>&lt;p&gt;Melanjutkan posting sebelumnya, kali ini saya bagikan config desktop yang saya pakai. Config-config tersebut berupa file-file (atau direktori) di HOME_DIR (~) dengan nama berawalan karakter titik (.) sehingga hidden, sering pula disebut sebagai dotfiles.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 04 Oct 2015 23:31:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%232/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%232/</guid>
+      </item>
+    
+      <item>
         <title>Linux Desktop Modding #1</title>
         
         
