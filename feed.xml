@@ -7,6 +7,18 @@
     <atom:link href="http://ragazenta.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Linux Desktop Modding #3</title>
+        
+        
+          <description>&lt;p&gt;Xmonad memiliki workspace berjumlah maksimal 9. Workspace bisa disebut sebagai layar virtual. Kita bisa memberi nama, menambahkan icon (dengan custom font) atau membuatnya agar clickable. Saya memakai 9 workspace.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 23 Oct 2015 06:13:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%233/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%233/</guid>
+      </item>
+    
+      <item>
         <title>Linux Desktop Modding #2</title>
         
         
