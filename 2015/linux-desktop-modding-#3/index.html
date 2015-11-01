@@ -42,16 +42,17 @@
 
 <p>Untuk berpindah dari workspace 1 ke yang lain, tekan modKey+[1-9] di keyboard. ModKey adalah tombol di keyboard yang harus ditekan untuk melakukan perintah di Xmonad. Untuk mengatur modKey apa yang dipakai, tinggal set modMask. Default Xmonad memakai modKey tombol Alt (mod1), namun saya ubah menjadi tombol Windows/Super (mod4). Mapping tombol keyboard bisa dilihat dengan xmodmap.</p>
 
-<p><a href="/assets/images/pngs/xmodmap.png"><picture>
-    <source srcset="/generated/pngs/xmodmap-752by244-3afd1b.png" media="(min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 40em) and (min-resolution: 144dpi)">
-    <source srcset="/generated/pngs/xmodmap-700by227-3afd1b.png" media="(min-width: 40em)">
-    <source srcset="/generated/pngs/xmodmap-675by219-3afd1b.png" media="(min-width: 30em) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 30em) and (min-resolution: 144dpi)">
-    <source srcset="/generated/pngs/xmodmap-450by146-3afd1b.png" media="(min-width: 30em)">
-    <source srcset="/generated/pngs/xmodmap-427by244-3afd1b.png" media="(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)">
-    <source srcset="/generated/pngs/xmodmap-350by200-3afd1b.png">
-    <img srcset="/generated/pngs/xmodmap-350by200-3afd1b.png" class="blog-full" itemprop="image" alt="Xmodmap" >
-  </picture>
-</a></p>
+<div class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">»»» xmodmap</span>
+<span class="go">xmodmap:  up to 4 keys per modifier, (keycodes in parentheses):</span>
+
+<span class="go">shift       Shift_L (0x32),  Shift_R (0x3e)</span>
+<span class="go">lock        Caps_Lock (0x42)</span>
+<span class="go">control     Control_L (0x25),  Control_R (0x69)</span>
+<span class="go">mod1        Alt_L (0x40),  Alt_R (0x6c),  Meta_L (0xcd)</span>
+<span class="go">mod2        Num_Lock (0x4d)</span>
+<span class="go">mod3      </span>
+<span class="go">mod4        Super_L (0x85),  Super_R (0x86),  Super_L (0xce),  Hyper_L (0xcf)</span>
+<span class="go">mod5        ISO_Level3_Shift (0x5c),  Mode_switch (0xcb)</span></code></pre></div>
 
 <div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><a name="True-1"></a><span class="nf">myModMask</span>       <span class="ow">=</span> <span class="n">mod4Mask</span>
 <a name="True-2"></a>
@@ -141,10 +142,6 @@
         
             <li>
                 <a href="/2015/linux-desktop-modding-%231/">Linux Desktop Modding #1<aside class="dates">Aug 23</aside></a>
-            </li>
-        
-            <li>
-                <a href="/2015/welcome-to-jekyll/">Welcome to Jekyll!<aside class="dates">Jul 05</aside></a>
             </li>
         
             <li>

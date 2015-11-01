@@ -72,7 +72,7 @@ h2 {
 
 .profile #wrapper {
 	padding: 100px 40px 0px;
-	max-width: 600px;
+	max-width: 720px;
 	margin: 0 auto;
 }
 
@@ -145,7 +145,7 @@ nav.main-nav a.cta {
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 720px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -290,11 +290,11 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; font-size:14px; }
+span.code { font-family:Menlo, Monaco, Courier; font-size:12px; }
 
 pre	{
 	font-family: 'Source Code Pro',Menlo,monospace;
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 1.5em;
 	font-weight: 500;
 	counter-reset: line-numbering;
@@ -313,7 +313,7 @@ pre a::before {
 	text-align: right;
 	display: inline-block;
 	margin-right: 1em;
-	font-size: 13px;
+	font-size: 12px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
