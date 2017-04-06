@@ -52,6 +52,7 @@ html, body { height: 100%; }
 
 body {
 	font:16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #f9f9f9;
 	color: #666;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -71,7 +72,7 @@ h2 {
 
 .profile #wrapper {
 	padding: 100px 40px 0px;
-	max-width: 600px;
+	max-width: 720px;
 	margin: 0 auto;
 }
 
@@ -100,21 +101,20 @@ h2 {
 
 .profile h2 {
 	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
-
+    font-weight: 300;
+    color: #aaa;
+    margin-top: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
 }
 
 nav.main-nav {
-	padding: 20px 20px 0;
+	padding: 16px 20px 16px;
 
 	/*max-width: 600px;*/
 	/*width:100%;*/
-	background: #fff;
-	background: rgba(255,255,255,.90);
+	background: #2d2d2d;
+	background: rgba(45,45,45,.90);
 	margin: 0 auto;
 	text-align: right;
 	/*position: fixed;*/
@@ -122,10 +122,10 @@ nav.main-nav {
 }
 
 nav.main-nav a {
-	top: 8px;
+    top: 8px;
 	right: 6px;
 	padding: 8px 12px;
-	color: #5badf0;
+	color: #fff;
 	font-size: 13px;
 	/*font-weight: bold;*/
 	line-height: 1.35;
@@ -133,19 +133,19 @@ nav.main-nav a {
 
 }
 nav.main-nav a.cta {
-	background: #5badf0;
+	background: #d64937;
 	color: #fff;
 	margin-left: 12px;
 }
 
 #wrapper {
-  max-width: 600px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 60px 40px 100px 40px;
 }
 
 #wrapper.home {
-	max-width: 600px;
+	max-width: 720px;
 	margin: 0 auto;
 	padding: 0px 40px 20px 40px;
 }
@@ -165,11 +165,10 @@ a,
 #post-list li:hover .dates,
 #title:hover {
 	text-decoration: none;
-	color: #5badf0;
-	color: #5694f1;
+	color: #d64937;
 }
 
-p a { color: #5694f1; }
+p a { color: #d64937; }
 
 /*Transitions*/
 a,
@@ -244,11 +243,11 @@ em, i { font-style: italic; }
 	font: normal 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;
 	margin: -5px 0 40px 0;
 	color: #b2b9be;
-	  font-size: 13px;
-	  text-transform: uppercase;
-	  letter-spacing: 2px;
-	  /*margin-top: 15px;*/
-	  display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /*margin-top: 15px;*/
+    display: inline-block;
 }
 
 #post-list h2 {
@@ -291,24 +290,48 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+span.code { font-family:Menlo, Monaco, Courier; font-size:12px; }
 
 pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
-	padding:20px;
-	background-color:#fdfdfd;
-	/*font-size:14px;*/
-	overflow:auto;
-	border-radius: 3px;
-	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
-	color: #d0d4d7;
+	font-family: 'Source Code Pro',Menlo,monospace;
+	font-size: 12px;
+	line-height: 1.5em;
+	font-weight: 500;
+	counter-reset: line-numbering;
+	margin-bottom: 30px;
+	white-space: pre;
+	overflow-x: auto;
+	word-break: inherit;
+	word-wrap: inherit;
+}
 
+pre a::before {
+	content: counter(line-numbering);
+	counter-increment: line-numbering;
+    padding: 1px 1em;
+	width: 48px;
+	text-align: right;
+	display: inline-block;
+	margin-right: 1em;
+	font-size: 12px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+pre a:first-of-type::before {
+	padding-top: 10px;
+}
+
+pre a:last-of-type::before {
+	padding-bottom: 10px;
+}
+
+pre a:only-of-type::before {
+	padding: 10px;
 }
 
 table {
@@ -574,7 +597,7 @@ h2.month {
 }
 
 #archive-list li a:hover,#archive-list li:hover .dates {
-	color: #5694f1;
+	color: #d64937;
 }
 
 #post-meta img.avatar {
@@ -594,12 +617,12 @@ h2.month {
 }
 
 #post-list.archive.readmore a{
-	font: 400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
-	color: #5694f1;
+	font: bold 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;
+    color: #bbb;
 }
 
 #post-list.archive.readmore a:hover{
-	opacity: 0.8;
+	color: #d64937;
 }
 
 #post-list.archive.readmore .dates{

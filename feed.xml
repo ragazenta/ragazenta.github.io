@@ -1,23 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Your New Jekyll Site</title>
-    <description>Blogging about stuffs</description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Renjaya Raga Zenta</title>
+    <description>211-115</description>
+    <link>http://ragazenta.github.io</link>
+    <atom:link href="http://ragazenta.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Welcome to Jekyll!</title>
+        <title>Linux Desktop Modding #4</title>
         
         
-          <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code class=&quot;highlighter-rouge&quot;&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
+          <description>&lt;p&gt;Conky saya pakai untuk menampilkan status koneksi internet (Wi-Fi atau LAN), status CPU dan RAM, serta menampilkan jam. Saya suka yang minimalis, semuanya saya taruh di status bar yang dibuat dengan Dzen.&lt;/p&gt;
 </description>
         
-        <pubDate>Sun, 10 Nov 2013 17:18:00 +0700</pubDate>
-        <link>http://localhost:4000/2013/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/2013/welcome-to-jekyll/</guid>
+        <pubDate>Mon, 02 Nov 2015 03:48:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%234/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%234/</guid>
+      </item>
+    
+      <item>
+        <title>Linux Desktop Modding #3</title>
+        
+        
+          <description>&lt;p&gt;Xmonad memiliki workspace berjumlah maksimal 9. Workspace bisa disebut sebagai layar virtual. Kita bisa memberi nama, menambahkan icon (dengan custom font) atau membuatnya agar clickable. Saya memakai 9 workspace.&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 23 Oct 2015 06:13:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%233/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%233/</guid>
+      </item>
+    
+      <item>
+        <title>Linux Desktop Modding #2</title>
+        
+        
+          <description>&lt;p&gt;Melanjutkan posting sebelumnya, kali ini saya bagikan config desktop yang saya pakai. Config-config tersebut berupa file-file (atau direktori) di HOME_DIR (~) dengan nama berawalan karakter titik (.) sehingga hidden, sering pula disebut sebagai dotfiles.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 04 Oct 2015 23:31:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%232/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%232/</guid>
+      </item>
+    
+      <item>
+        <title>Linux Desktop Modding #1</title>
+        
+        
+          <description>&lt;p&gt;Sebelumnya, ya, saya memakai Linux. Sekarang distro yang digunakan adalah &lt;a href=&quot;https://www.gentoo.org&quot;&gt;Gentoo&lt;/a&gt;.&lt;/p&gt;
+</description>
+        
+        <pubDate>Sun, 23 Aug 2015 17:41:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2015/linux-desktop-modding-%231/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2015/linux-desktop-modding-%231/</guid>
+      </item>
+    
+      <item>
+        <title>Posting #3</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 04 Apr 2013 14:35:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/posting-%233/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/posting-%233/</guid>
+      </item>
+    
+      <item>
+        <title>Posting #2</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 20 Mar 2013 13:04:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/posting-%232/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/posting-%232/</guid>
+      </item>
+    
+      <item>
+        <title>Posting #1</title>
+        
+        
+          <description>&lt;p&gt;Dipindah dari Blogger:&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 11 Feb 2013 08:59:00 +0700</pubDate>
+        <link>http://ragazenta.github.io/2013/posting-%231/</link>
+        <guid isPermaLink="true">http://ragazenta.github.io/2013/posting-%231/</guid>
       </item>
     
   </channel>

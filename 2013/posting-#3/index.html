@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Renjaya Raga Zenta - Posting #3</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/solarized-dark.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <script src="/assets/js/picturefill.min.js"></script>
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+    <a class="cta" href="/feed.xml">Subscribe</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Posting #3</h1>
+        <h2 class="headline">April 4, 2013</h2>
+    </header>
+    <section id="post-body">
+        <p>Dipindah dari Blogger:</p>
+
+<blockquote>
+<p>Sekarang saya mau nyoba menampilkan kodingan di Blogger. Saya menggunakan Prettify supaya kodingan terlihat warna-warni dan mudah dibaca. Berikut adalah kodingan HelloJNI yang merupakan sample dalam Android NDK.</p>
+</blockquote>
+
+<div class="highlight"><pre><code class="language-java" data-lang="java"><a name="True-1"></a><span class="cm">/*</span>
+<a name="True-2"></a><span class="cm"> * Copyright (C) 2009 The Android Open Source Project</span>
+<a name="True-3"></a><span class="cm"> *</span>
+<a name="True-4"></a><span class="cm"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<a name="True-5"></a><span class="cm"> * you may not use this file except in compliance with the License.</span>
+<a name="True-6"></a><span class="cm"> * You may obtain a copy of the License at</span>
+<a name="True-7"></a><span class="cm"> *</span>
+<a name="True-8"></a><span class="cm"> *      http://www.apache.org/licenses/LICENSE-2.0</span>
+<a name="True-9"></a><span class="cm"> *</span>
+<a name="True-10"></a><span class="cm"> * Unless required by applicable law or agreed to in writing, software</span>
+<a name="True-11"></a><span class="cm"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<a name="True-12"></a><span class="cm"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<a name="True-13"></a><span class="cm"> * See the License for the specific language governing permissions and</span>
+<a name="True-14"></a><span class="cm"> * limitations under the License.</span>
+<a name="True-15"></a><span class="cm"> */</span>
+<a name="True-16"></a><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">hellojni</span><span class="o">;</span>
+<a name="True-17"></a>
+<a name="True-18"></a><span class="kn">import</span> <span class="nn">android.app.Activity</span><span class="o">;</span>
+<a name="True-19"></a><span class="kn">import</span> <span class="nn">android.widget.TextView</span><span class="o">;</span>
+<a name="True-20"></a><span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
+<a name="True-21"></a>
+<a name="True-22"></a>
+<a name="True-23"></a><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloJni</span> <span class="kd">extends</span> <span class="n">Activity</span>
+<a name="True-24"></a><span class="o">{</span>
+<a name="True-25"></a>    <span class="cm">/** Called when the activity is first created. */</span>
+<a name="True-26"></a>    <span class="nd">@Override</span>
+<a name="True-27"></a>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
+<a name="True-28"></a>    <span class="o">{</span>
+<a name="True-29"></a>        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+<a name="True-30"></a>
+<a name="True-31"></a>        <span class="cm">/* Create a TextView and set its content.</span>
+<a name="True-32"></a><span class="cm">         * the text is retrieved by calling a native</span>
+<a name="True-33"></a><span class="cm">         * function.</span>
+<a name="True-34"></a><span class="cm">         */</span>
+<a name="True-35"></a>        <span class="n">TextView</span>  <span class="n">tv</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">TextView</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+<a name="True-36"></a>        <span class="n">tv</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span> <span class="n">stringFromJNI</span><span class="o">()</span> <span class="o">);</span>
+<a name="True-37"></a>        <span class="n">setContentView</span><span class="o">(</span><span class="n">tv</span><span class="o">);</span>
+<a name="True-38"></a>    <span class="o">}</span>
+<a name="True-39"></a>
+<a name="True-40"></a>    <span class="cm">/* A native method that is implemented by the</span>
+<a name="True-41"></a><span class="cm">     * &#39;hello-jni&#39; native library, which is packaged</span>
+<a name="True-42"></a><span class="cm">     * with this application.</span>
+<a name="True-43"></a><span class="cm">     */</span>
+<a name="True-44"></a>    <span class="kd">public</span> <span class="kd">native</span> <span class="n">String</span>  <span class="nf">stringFromJNI</span><span class="o">();</span>
+<a name="True-45"></a>
+<a name="True-46"></a>    <span class="cm">/* This is another native method declaration that is *not*</span>
+<a name="True-47"></a><span class="cm">     * implemented by &#39;hello-jni&#39;. This is simply to show that</span>
+<a name="True-48"></a><span class="cm">     * you can declare as many native methods in your Java code</span>
+<a name="True-49"></a><span class="cm">     * as you want, their implementation is searched in the</span>
+<a name="True-50"></a><span class="cm">     * currently loaded native libraries only the first time</span>
+<a name="True-51"></a><span class="cm">     * you call them.</span>
+<a name="True-52"></a><span class="cm">     *</span>
+<a name="True-53"></a><span class="cm">     * Trying to call this function will result in a</span>
+<a name="True-54"></a><span class="cm">     * java.lang.UnsatisfiedLinkError exception !</span>
+<a name="True-55"></a><span class="cm">     */</span>
+<a name="True-56"></a>    <span class="kd">public</span> <span class="kd">native</span> <span class="n">String</span>  <span class="nf">unimplementedStringFromJNI</span><span class="o">();</span>
+<a name="True-57"></a>
+<a name="True-58"></a>    <span class="cm">/* this is used to load the &#39;hello-jni&#39; library on application</span>
+<a name="True-59"></a><span class="cm">     * startup. The library has already been unpacked into</span>
+<a name="True-60"></a><span class="cm">     * /data/data/com.example.hellojni/lib/libhello-jni.so at</span>
+<a name="True-61"></a><span class="cm">     * installation time by the package manager.</span>
+<a name="True-62"></a><span class="cm">     */</span>
+<a name="True-63"></a>    <span class="kd">static</span> <span class="o">{</span>
+<a name="True-64"></a>        <span class="n">System</span><span class="o">.</span><span class="na">loadLibrary</span><span class="o">(</span><span class="s">&quot;hello-jni&quot;</span><span class="o">);</span>
+<a name="True-65"></a>    <span class="o">}</span>
+<a name="True-66"></a><span class="o">}</span></code></pre></div>
+
+<p>Prettify diganti menggunakan syntax highlighting bawaan Jekyll.</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/ragazenta">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Renjaya Raga Zenta</span>
+            <span>211-115</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://ragazenta.github.io/2013/posting-%233/ - Posting #3 by @ragazenta"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'ragazenta';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+    <ul id="post-list" class="archive readmore">
+        <h3>Read more</h3>
+        
+            <li>
+                <a href="/2015/linux-desktop-modding-%234/">Linux Desktop Modding #4<aside class="dates">Nov 02</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/linux-desktop-modding-%233/">Linux Desktop Modding #3<aside class="dates">Oct 23</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/linux-desktop-modding-%232/">Linux Desktop Modding #2<aside class="dates">Oct 04</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2015/linux-desktop-modding-%231/">Linux Desktop Modding #1<aside class="dates">Aug 23</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2013/posting-%233/">Posting #3<aside class="dates">Apr 04</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2013/posting-%232/">Posting #2<aside class="dates">Mar 20</aside></a>
+            </li>
+        
+            <li>
+                <a href="/2013/posting-%231/">Posting #1<aside class="dates">Feb 11</aside></a>
+            </li>
+        
+    </ul>
+
+
+
+
+
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-XXXXXXXX-X', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+
